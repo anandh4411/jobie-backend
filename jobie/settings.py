@@ -28,6 +28,7 @@ SECRET_KEY = 'django-insecure-$+^-zyb!sp1*itove_nps3%pm0_=n+7e0yr(a-7s+nb&uosqiu
 DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost','0.0.0.0', '192.168.225.40', '192.168.225.27', '*']
+CSRF_TRUSTED_ORIGINS = ['*', 'https://web-production-f2c9e.up.railway.app/']
 
 CORS_ORIGIN_ALLOW_ALL = True
 
