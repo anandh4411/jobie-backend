@@ -28,7 +28,8 @@ SECRET_KEY = 'django-insecure-$+^-zyb!sp1*itove_nps3%pm0_=n+7e0yr(a-7s+nb&uosqiu
 DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost','0.0.0.0', '192.168.225.40', '192.168.225.27', '*']
-CSRF_TRUSTED_ORIGINS = ['*', 'https://web-production-f2c9e.up.railway.app/']
+
+CSRF_TRUSTED_ORIGINS = ['*']
 
 CORS_ORIGIN_ALLOW_ALL = True
 
@@ -56,6 +57,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'corsheaders.middleware.CorsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware'
 ]
 
 ROOT_URLCONF = 'jobie.urls'
@@ -127,7 +129,7 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT =os.path.join(BASE_DIR, 'staticfiles')
-# STATICFILES_STORAGE="whitenoise.storage.CompressedManifestStaticFilesStorage"
+STATICFILES_STORAGE="whitenoise.storage.CompressedManifestStaticFilesStorage"
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/uploads')
 
