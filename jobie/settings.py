@@ -29,7 +29,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost','0.0.0.0', '192.168.225.40', '192.168.225.27', '*']
 
-CSRF_TRUSTED_ORIGINS = ['https://web-production-f2c9e.up.railway.app/']
+CSRF_TRUSTED_ORIGINS = ['https://web-production-f2c9e.up.railway.app', 'https://web-production-f2c9e.up.railway.app/admin']
 
 CORS_ORIGIN_ALLOW_ALL = True
 
